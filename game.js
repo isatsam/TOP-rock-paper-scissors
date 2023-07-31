@@ -47,8 +47,8 @@ function playRound (playerSelection, computerSelection) {
 function game () {
     choices = ["rock", "paper", "scissors"];
     for (let i = 0; i < 5; i++) {
-    let playerChoice = promptPlayerChoice(choices);
-    let computerChoice = getComputerChoice(choices);
+        let playerChoice = promptPlayerChoice(choices);
+        let computerChoice = getComputerChoice(choices);
     
         let winner = playRound(playerChoice, computerChoice);
         if (winner == "tie") {
