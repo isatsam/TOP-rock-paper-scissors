@@ -17,6 +17,8 @@ function getPlayerChoice (array) {
     return playerInput;
 }
 
+// Abiding by the real rules of the game and picking a winner based on the 
+// player's and computer's choices
 function decideWinner (playerSelection, computerSelection) {
     let winner;
 
@@ -44,6 +46,7 @@ function decideWinner (playerSelection, computerSelection) {
     return winner;
 }
 
+// Getting choices, deciding winner, then outputting the result to the console
 function playRound (choicesArray) {
     let playerChoice = getPlayerChoice(choicesArray);
     let computerChoice = getComputerChoice(choicesArray);
@@ -52,7 +55,10 @@ function playRound (choicesArray) {
     if (winner == "tie") {
         console.log("You both drew " + playerChoice + ".\nIt's a tie!")
     } else {
-        console.log("You drew " + playerChoice + " and computer drew " + computerChoice);
+        console.log("You drew " + playerChoice + " and computer drew "
+             + computerChoice);
+
+        // Announcing the winner
         if (winner == "computer") {
             console.log("Computer won! Sorry about that!");
         } else {
