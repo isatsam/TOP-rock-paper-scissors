@@ -61,11 +61,11 @@ function playRound (choicesArray) {
     }
 }
 
-function game () {
+function game (rounds) {
     choices = ["rock", "paper", "scissors"];
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < rounds; i++) {
         playRound(choices)
     }
 }
 
-game()
+game(5)
