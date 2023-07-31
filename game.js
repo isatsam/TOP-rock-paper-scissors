@@ -14,9 +14,12 @@ function promptPlayerChoice (array) {
     // Prompt again if we got a string that's not in the array from the user
     while (typeof playerInput == string && array.includes(playerInput) == false) {
         let playerInput = prompt("Come on! Rock, Paper, Scissors?");
+        // Forgive player for not entering anything twice in a row
+        if (typeof playerInput != string) {
+            console.log("You refused to play... Refresh the page to try again.")
+        }
     }
 
-    if (typeof playerInput == string) {
         return playerInput;
     }
 
