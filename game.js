@@ -1,5 +1,3 @@
-choices = ["rock", "paper", "scissors"];
-
 function getComputerChoice (array) {
     var choiceNumber = Math.floor(Math.random()*array.length);
     var computerChoice = array[choiceNumber];
@@ -20,8 +18,8 @@ function promptPlayerChoice (array) {
         }
     }
 
-        return playerInput;
-    }
+    return playerInput;
+}
 
 function playRound (playerSelection, computerSelection) {
     let winner;
@@ -32,7 +30,7 @@ function playRound (playerSelection, computerSelection) {
     if (playerSelection == "rock") {
         if (computerSelection == "scissors") {
             winner = "player";
-}
+        }
     } else if (playerSelection == "paper") {
         if (computerSelection == "rock") {
             winner = "player";
@@ -50,3 +48,22 @@ function playRound (playerSelection, computerSelection) {
     return winner;
 }
 
+function game () {
+    choices = ["rock", "paper", "scissors"];
+    let playerChoice = promptPlayerChoice(choices);
+    let computerChoice = getComputerChoice(choices);
+    
+    for (let i = 0; i < 5; i++) {
+        let winner = playRound(playerChoice, computerChoice);
+        if (winner == "tie") {
+            console.log("You both drew " + playerChoice + ".\nIt's a tie!")
+        } else {
+            console.log("You drew " + playerChoice + " and computer drew " + computerChoice);
+            if (winner == "computer") {
+                console.log("Computer won! Sorry about that!");
+            } else {
+                console.log("You won! Congratulations!");
+            }
+        }
+    }
+}
