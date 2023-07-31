@@ -24,28 +24,29 @@ function promptPlayerChoice (array) {
     }
 
 function playRound (playerSelection, computerSelection) {
-    let playerWin;
-    let tie;
+    let winner;
 
     if (playerSelection == computerSelection) {
-        tie = true;
+        winner = "tie";
     }
     if (playerSelection == "rock") {
         if (computerSelection == "scissors") {
-            playerWin = true;
+            winner = "player";
 }
     } else if (playerSelection == "paper") {
         if (computerSelection == "rock") {
-            playerWin = true;
+            winner = "player";
         }
     } else if (playerSelection == "scissors") {
         if (computerSelection == "paper") {
-            playerWin = true;
+            winner = "player";
         }
     }
 
-    let result = [playerWin, tie];
+    if (winner != "tie" && winner != "player") {
+        winner = "computer"
+    }
 
-    return result;
+    return winner;
 }
 
