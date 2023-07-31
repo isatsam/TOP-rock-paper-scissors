@@ -50,10 +50,10 @@ function playRound (playerSelection, computerSelection) {
 
 function game () {
     choices = ["rock", "paper", "scissors"];
+    for (let i = 0; i < 5; i++) {
     let playerChoice = promptPlayerChoice(choices);
     let computerChoice = getComputerChoice(choices);
     
-    for (let i = 0; i < 5; i++) {
         let winner = playRound(playerChoice, computerChoice);
         if (winner == "tie") {
             console.log("You both drew " + playerChoice + ".\nIt's a tie!")
