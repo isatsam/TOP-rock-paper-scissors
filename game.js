@@ -6,16 +6,12 @@ function getComputerChoice (array) {
 
 // Gets player's choice via a prompt()
 function promptPlayerChoice (array) {
-    var playerInput = prompt("Rock, Paper, Scissors?");
-    playerInput = playerInput.toLowerCase();
+    let playerInput = prompt("Rock, Paper, Scissors?");
 
     // Prompt again if we got a string that's not in the array from the user
-    while (typeof playerInput == string && array.includes(playerInput) == false) {
-        let playerInput = prompt("Come on! Rock, Paper, Scissors?");
-        // Forgive player for not entering anything twice in a row
-        if (typeof playerInput != string) {
-            console.log("You refused to play... Refresh the page to try again.")
-        }
+    while (array.includes(playerInput) == false) {
+        playerInput = prompt("Come on! Rock, Paper, Scissors?").toLowerCase();
+        console.log(playerInput + " " + array.includes(playerInput));
     }
 
     return playerInput;
