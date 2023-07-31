@@ -1,6 +1,6 @@
 function getComputerChoice (array) {
-    var choiceNumber = Math.floor(Math.random()*array.length);
-    var computerChoice = array[choiceNumber];
+    let choiceNumber = Math.floor(Math.random()*array.length);
+    let computerChoice = array[choiceNumber];
     return computerChoice;
 }
 
