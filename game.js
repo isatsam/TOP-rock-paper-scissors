@@ -23,4 +23,29 @@ function promptPlayerChoice (array) {
         return playerInput;
     }
 
+function playRound (playerSelection, computerSelection) {
+    let playerWin;
+    let tie;
+
+    if (playerSelection == computerSelection) {
+        tie = true;
+    }
+    if (playerSelection == "rock") {
+        if (computerSelection == "scissors") {
+            playerWin = true;
 }
+    } else if (playerSelection == "paper") {
+        if (computerSelection == "rock") {
+            playerWin = true;
+        }
+    } else if (playerSelection == "scissors") {
+        if (computerSelection == "paper") {
+            playerWin = true;
+        }
+    }
+
+    let result = [playerWin, tie];
+
+    return result;
+}
+
