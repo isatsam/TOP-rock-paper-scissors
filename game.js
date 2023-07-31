@@ -44,23 +44,27 @@ function decideWinner (playerSelection, computerSelection) {
     return winner;
 }
 
+function playRound (choicesArray) {
+    let playerChoice = promptPlayerChoice(choicesArray);
+    let computerChoice = getComputerChoice(choicesArray);
+
+    let winner = decideWinner(playerChoice, computerChoice);
+    if (winner == "tie") {
+        console.log("You both drew " + playerChoice + ".\nIt's a tie!")
+    } else {
+        console.log("You drew " + playerChoice + " and computer drew " + computerChoice);
+        if (winner == "computer") {
+            console.log("Computer won! Sorry about that!");
+        } else {
+            console.log("You won! Congratulations!");
+        }
+    }
+}
+
 function game () {
     choices = ["rock", "paper", "scissors"];
     for (let i = 0; i < 5; i++) {
-        let playerChoice = promptPlayerChoice(choices);
-        let computerChoice = getComputerChoice(choices);
-    
-        let winner = playRound(playerChoice, computerChoice);
-        if (winner == "tie") {
-            console.log("You both drew " + playerChoice + ".\nIt's a tie!")
-        } else {
-            console.log("You drew " + playerChoice + " and computer drew " + computerChoice);
-            if (winner == "computer") {
-                console.log("Computer won! Sorry about that!");
-            } else {
-                console.log("You won! Congratulations!");
-            }
-        }
+        playRound(choices)
     }
 }
 
