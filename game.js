@@ -17,7 +17,7 @@ function promptPlayerChoice (array) {
     return playerInput;
 }
 
-function playRound (playerSelection, computerSelection) {
+function decideWinner (playerSelection, computerSelection) {
     let winner;
 
     if (playerSelection == computerSelection) {
