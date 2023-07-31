@@ -5,7 +5,7 @@ function getComputerChoice (array) {
 }
 
 // Gets player's choice via a prompt()
-function promptPlayerChoice (array) {
+function getPlayerChoice (array) {
     let playerInput = prompt("Rock, Paper, Scissors?");
 
     // Prompt again if we got a string that's not in the array from the user
@@ -45,7 +45,7 @@ function decideWinner (playerSelection, computerSelection) {
 }
 
 function playRound (choicesArray) {
-    let playerChoice = promptPlayerChoice(choicesArray);
+    let playerChoice = getPlayerChoice(choicesArray);
     let computerChoice = getComputerChoice(choicesArray);
 
     let winner = decideWinner(playerChoice, computerChoice);
