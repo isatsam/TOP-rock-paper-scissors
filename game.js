@@ -1,1 +1,1 @@
-console.log("Hello!")
+choices = ["rock", "paper", "scissors"];
