@@ -11,11 +11,19 @@ main {
     align-items: center;
 }
 
-.choice-flex {
-    display: flex;
-    flex-flow: row nowrap;
+a {
+    text-decoration: none;
 }
 
+a:visited {
+    color: rgb(245, 245, 245);
+}
+
+a:hover {
+    color: rgb(167, 103, 7);
+}
+
+/* Player VS opponent part of the page */
 .player {
     margin: 25px auto auto auto;
 }
