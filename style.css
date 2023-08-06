@@ -62,7 +62,19 @@ a:hover {
     margin: 15px;
     border: 4px dashed rgb(245, 245, 245);
 }
+
+/* The score under the choices */
+.score {
+    border-top: 8px double rgb(167, 103, 7);
+    width: 12vw;
+    font-size: 24px;
+    margin: 25px;
 }
+
+.score > .separator {
+    color: rgb(167, 103, 7);
+}
+
 
 /* Dynamically applied styles */
 .inactive {
