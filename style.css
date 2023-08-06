@@ -5,15 +5,58 @@ body {
 main {
     text-align: center;
     color: rgb(245, 245, 245);
+    font-size: 18px;
     display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
 .choice-flex {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row nowrap;
 }
 
-main > .choice-flex > img {
-    width: 80px;
-    height: 80px;
+.player {
+    margin: 25px auto auto auto;
+}
+
+.player > p {
+    font-size: 36px;
+    margin: 10px;
+}
+
+.ai > p {
+    margin: 5px;
+}
+
+/* Images */
+.player > .choices > img {
+    width: 12vw;
+    height: 12vw;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.player > .choices > img:hover {
+    border: 2px solid rgb(167, 103, 7);
+}
+
+.ai > .choices > img {
+    width: 6vw;
+    height: 6vw;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+/* Universal rules */
+.choices > img {
+    margin: 15px;
+    border: 2px dashed rgb(245, 245, 245);
+}
+
+/* Dynamically applied styles */
+.inactive {
+    opacity: 0.5;
 }
