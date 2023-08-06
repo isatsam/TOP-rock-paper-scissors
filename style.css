@@ -42,7 +42,6 @@ a:hover {
     width: 12vw;
     height: 12vw;
     padding: 15px;
-    margin: 15px;
     border-radius: 50px;
     object-fit: cover;
 }
@@ -73,6 +72,32 @@ a:hover {
 
 .score > .separator {
     color: rgb(167, 103, 7);
+}
+
+
+
+/* Links to other stuff, positioned on the right of the page */
+.side-links {
+    position: absolute;
+    top: 3vh;
+    right: 0;
+    rotate: 270deg;
+    transform-origin: right bottom;
+}
+
+.side-links > * {
+    margin: 0;
+    padding: 0;
+}
+
+.side-links > ul > li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 15px 15px 10px 15px;
+    margin: 15px 15px 0 15px;
+    border-top: 2px dashed rgb(167, 103, 7);
+    border-left: 2px dashed rgb(167, 103, 7);
+    border-right: 2px dashed rgb(167, 103, 7);
 }
 
 
