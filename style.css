@@ -1,8 +1,10 @@
 body {
-    background-color: darkslategrey;
+    background-color: rgb(37, 37, 37);
 }
 
 main {
+    text-align: center;
+    color: rgb(245, 245, 245);
     display: flex;
 }
 
