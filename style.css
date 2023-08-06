@@ -1,0 +1,17 @@
+body {
+    background-color: darkslategrey;
+}
+
+main {
+    display: flex;
+}
+
+.choice-flex {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+main > .choice-flex > img {
+    width: 80px;
+    height: 80px;
+}
