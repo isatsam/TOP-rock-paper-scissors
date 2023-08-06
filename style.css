@@ -11,6 +11,7 @@ main {
     align-items: center;
 }
 
+/* Links */
 a {
     text-decoration: none;
 }
@@ -37,7 +38,7 @@ a:hover {
     margin: 5px;
 }
 
-/* Images */
+/* Game zone, main part of the page */
 .player > .choices > img {
     width: 12vw;
     height: 12vw;
@@ -50,6 +51,7 @@ a:hover {
     border: 4px solid rgb(167, 103, 7);
 }
 
+/* Opponent's zone, smaller */
 .ai > .choices > img {
     width: 6vw;
     height: 6vw;
@@ -57,12 +59,13 @@ a:hover {
     border-radius: 25px;
 }
 
+/* Universal rules for displayed rock-paper-scissors */
 .choices > img {
     margin: 15px;
     border: 4px dashed rgb(245, 245, 245);
 }
 
-/* The score under the choices */
+/* The score under the game zone */
 .score {
     border-top: 8px double rgb(167, 103, 7);
     width: 12vw;
@@ -73,8 +76,6 @@ a:hover {
 .score > .separator {
     color: rgb(167, 103, 7);
 }
-
-
 
 /* Links to other stuff, positioned on the right of the page */
 .side-links {
@@ -99,7 +100,6 @@ a:hover {
     border-left: 2px dashed rgb(167, 103, 7);
     border-right: 2px dashed rgb(167, 103, 7);
 }
-
 
 /* Dynamically applied styles */
 .inactive {
