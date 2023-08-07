@@ -36,7 +36,7 @@ a:hover {
     margin: 10px;
 }
 
-.ai > p {
+.opponent > p {
     margin: 5px;
 }
 
@@ -55,7 +55,7 @@ a:hover {
 }
 
 /* Opponent's zone, smaller */
-.ai > .choices > img {
+.opponent > .choices > img {
     width: 6vw;
     height: 6vw;
     padding: 5px;
