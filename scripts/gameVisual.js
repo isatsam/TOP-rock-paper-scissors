@@ -74,6 +74,12 @@ function endGame() {
 
     announceWinner(winner);     // Change announcement
     changeOpponentStatus(true); // Set opponent's status to default
+
+    setTimeout(function() {
+        resetVisuals()
+    }, 2000);
+}
+
 /* -------------------------------------- */
 /* Do all of this AFTER the game has ended and has been concluded */
 function resetScore () {
