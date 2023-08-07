@@ -63,4 +63,19 @@ function resetScore () {
     document.getElementById("playerScore").textContent = "0";
     document.getElementById("opponentScore").textContent = "0";
 }
+
+function endGame() {
+    const playerScore = document.getElementById("playerScore").textContent;
+    const opponentScore = document.getElementById("opponentScore").textContent;
+    let winner = "";
+    if (playerScore > opponentScore) {
+        winner = "Player";
+    } else if (playerScore < opponentScore) {
+        winner = "Opponent";
+    } else {
+        winner = "Tie"
+    }
+
+    announceWinner(winner);     // Change announcement
+    changeOpponentStatus(true); // Set opponent's status to default
 }
