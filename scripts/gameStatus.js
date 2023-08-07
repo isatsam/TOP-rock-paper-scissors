@@ -1,8 +1,6 @@
-function toggleInactivity(id) {
-    const el = document.getElementById(id);
-    el.classList.toggle("inactive");
-    el.classList.toggle("selected");
-}
+/* This code makes such visual changes that can be considered crucial for the game
+    to be played, such as announcing the winner of this round, the winner of this game,
+    the current score, and so on. */
 
 /* -------------------------------------- */
 /* Update page while the game haven't ended yet */
