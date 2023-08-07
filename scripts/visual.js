@@ -23,8 +23,27 @@ function announceRound(result, gameEnd) {
     }
 }
 
+function changeOpponentStatus(gameRestarted) {
+    const status = document.getElementById("opponentStatus");
+    if (gameRestarted == true) {
+        status.textContent = "Opponent is waiting for you...";
+    } else {
+        let statuses = [
+            "Opponent is waiting for you...",
+            "Opponent is staring at your hand...",
+            "Opponent is trying to predict the future...",
+            "Opponent is fidgeting...", 
+            "", "", "", "", "", "", "", "", "", "", ""
+            // 4 in 15 chance for a unique status, otherwise nothing is displayed
+        ];
+        let newStatusIndex = Math.floor(Math.random() * (statuses.length - 0) + 0);
+        status.textContent = statuses[newStatusIndex];
+    }
+}
+
 /* Call all visual changes when the game didn't end */
 function updatePage(side) {
     addScore(side);
     announceRound(side);
+    changeOpponentStatus(false);
 }
