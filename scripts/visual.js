@@ -4,3 +4,7 @@ function toggleInactivity(id) {
     el.classList.toggle("selected");
 }
 
+function addScore(side) {
+    const score = document.getElementById(side + "Score");
+    score.textContent(+(score.textContent) + 1);
+}
