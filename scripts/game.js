@@ -3,8 +3,6 @@ let currentRoundCount = 0;
 function pickWinner(playerClick, opponent) {
     let array = ["rock", "paper", "scissors"];
     let player = array.indexOf(playerClick);
-    console.log("Player: " + player)
-    console.log("Opponent: " + opponent)
     if (opponent == player) { 
         // Equals = tie
         return "tie";
@@ -22,11 +20,12 @@ function getOpponentChoice () {
     return Math.floor(Math.random() * (4 - 1) + 1);
 }
 
-function playRound(playerClick, roundCount) {
+function playRound(playerClick) {
     let opponentChoice = getOpponentChoice()
     let winner = pickWinner(playerClick, opponentChoice);
-    roundCount += 1;
-    if (roundCount <= 5) {
+    currentRoundCount = currentRoundCount + 1;
+    addScore(winner); // This is the only "visual" function that we call inside game lo
+    if (currentRoundCount >= 5) {
         endGame(winner);
     } else {
         updatePage(winner);
