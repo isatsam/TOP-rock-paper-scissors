@@ -22,4 +22,9 @@ function announceRound(result, gameEnd) {
         }
     }
 }
+
+/* Call all visual changes when the game didn't end */
+function updatePage(side) {
+    addScore(side);
+    announceRound(side);
 }
