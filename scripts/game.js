@@ -1,3 +1,5 @@
+let currentRoundCount = 0;
+
 function pickWinner(playerClick, opponent) {
     let array = ["rock", "paper", "scissors"];
     let player = array.indexOf(playerClick);
@@ -20,8 +22,13 @@ function getOpponentChoice () {
     return Math.floor(Math.random() * (4 - 1) + 1);
 }
 
-function playRound(playerClick) {
+function playRound(playerClick, roundCount) {
     let opponentChoice = getOpponentChoice()
     let winner = pickWinner(playerClick, opponentChoice);
-    updatePage(winner);
+    roundCount += 1;
+    if (roundCount <= 5) {
+        endGame(winner);
+    } else {
+        updatePage(winner);
+    }
 }
