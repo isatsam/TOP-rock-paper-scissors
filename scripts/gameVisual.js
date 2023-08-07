@@ -75,8 +75,10 @@ function endGame() {
     announceWinner(winner);     // Change announcement
     changeOpponentStatus(true); // Set opponent's status to default
 
+    toggleAllPlayer();
     setTimeout(function() {
-        resetVisuals()
+        resetVisuals();
+        toggleAllPlayer();
     }, 2000);
 }
 

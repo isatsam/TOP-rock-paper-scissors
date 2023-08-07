@@ -5,5 +5,11 @@
 function toggleInactivity(id) {
     const el = document.getElementById(id);
     el.classList.toggle("inactive");
-    el.classList.toggle("selected");
+}
+
+// Trying to make all elements unclickable but it doesn't work for some reason /shrug
+function toggleAllPlayer () {
+    toggleInactivity("playerRock");
+    toggleInactivity("playerPaper");
+    toggleInactivity("playerScissors");
 }
