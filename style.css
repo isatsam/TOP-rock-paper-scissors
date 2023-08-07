@@ -55,6 +55,14 @@ a:hover {
 }
 
 /* Opponent's zone, smaller */
+.opponent-status-container {
+    height: 30px;
+}
+
+.opponent-status-container > p {
+    margin: 0;
+}
+
 .opponent > .choices > img {
     width: 6vw;
     height: 6vw;
