@@ -1,19 +1,27 @@
-function pickWinner(player, computer) {
-    if (computer == player) { 
+function pickWinner(playerClick, opponent) {
+    let array = ["rock", "paper", "scissors"];
+    let player = array.indexOf(playerClick);
+    console.log("Player: " + player)
+    console.log("Opponent: " + opponent)
+    if (opponent == player) { 
         // Equals = tie
         return "tie";
-    } else if (computer == 3 || player == 3) {
+    } else if (opponent == 3 || player == 3) {
         // Biggest value = winner
-        if (computer < player) { return "player"; };
+        if (opponent < player) { return "player"; };
     } else { 
         // Smallest value = winner
-        if (computer > player) { return "player"; };
+        if (opponent > player) { return "player"; };
     }
-    return "computer";
+    return "opponent";
+}
+
+function getOpponentChoice () {
+    return Math.floor(Math.random() * (4 - 1) + 1);
 }
 
 function playRound(playerClick) {
-    const computerChoice = () => Math.floor(Math.random() * (4 - 1) + 1);
-    let winner = pickWinner(playerClick, computerChoice);
-    addScore(winner);
+    let opponentChoice = getOpponentChoice()
+    let winner = pickWinner(playerClick, opponentChoice);
+    updatePage(winner);
 }
