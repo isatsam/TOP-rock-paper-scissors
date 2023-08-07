@@ -3,3 +3,4 @@ function toggleInactivity(id) {
     el.classList.toggle("inactive");
     el.classList.toggle("selected");
 }
+
