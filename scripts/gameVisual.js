@@ -58,11 +58,6 @@ function announceWinner (winner) {
     }
 }
 
-function resetScore () {
-    document.getElementById("playerScore").textContent = "0";
-    document.getElementById("opponentScore").textContent = "0";
-}
-
 /* Call all visual changes after the game ended,
     (!) announce winner (!) */
 function endGame() {
@@ -79,4 +74,23 @@ function endGame() {
 
     announceWinner(winner);     // Change announcement
     changeOpponentStatus(true); // Set opponent's status to default
+/* -------------------------------------- */
+/* Do all of this AFTER the game has ended and has been concluded */
+function resetScore () {
+    document.getElementById("playerScore").textContent = "0";
+    document.getElementById("opponentScore").textContent = "0";
+}
+
+function resetAnnouncement() {
+    document.getElementById("announcement").textContent = "Rock, paper, scissors?";
+}
+
+function resetCount () {
+    currentRoundCount = 0;
+}
+
+function resetVisuals () {
+    resetScore();
+    resetAnnouncement();
+    resetCount();
 }
