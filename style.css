@@ -25,6 +25,7 @@ a:hover {
     color: rgb(167, 103, 7);
 }
 
+/* -------------------------------- */
 /* Player VS opponent part of the page */
 .player {
     margin: 25px auto auto auto;
@@ -39,7 +40,7 @@ a:hover {
     margin: 5px;
 }
 
-/* Game zone, main part of the page */
+/* Rock-paper-scissors, main part of the page */
 .player > .choices > input {
     width: 12vw;
     height: 12vw;
@@ -78,6 +79,8 @@ a:hover {
     opacity: 0.7;
     border: 4px solid transparent;
 }
+
+/* -------------------------------- */
 /* The score under the game zone */
 .score {
     border-top: 8px double rgb(167, 103, 7);
@@ -91,6 +94,7 @@ a:hover {
     color: rgb(167, 103, 7);
 }
 
+/* -------------------------------- */
 /* Links to other stuff, positioned on the right of the page */
 .side-links {
     position: absolute;
