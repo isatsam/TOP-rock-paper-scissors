@@ -102,6 +102,17 @@ a:hover {
     border-right: 2px dashed rgb(167, 103, 7);
 }
 
+@media screen and (max-width: 550px) {
+    .side-links {
+        rotate: 0deg;
+        position: fixed;
+        top: auto;
+        right: auto;
+        bottom: 0;
+        font-size: 14px;
+    }
+}
+
 /* Dynamically applied styles */
 .inactive {
     opacity: 0.5;
