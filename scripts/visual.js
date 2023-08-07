@@ -58,4 +58,9 @@ function announceWinner (winner) {
         document.getElementById("announcement").textContent = "It's a tie... Better luck next time!"
     }
 }
+
+function resetScore () {
+    document.getElementById("playerScore").textContent = "0";
+    document.getElementById("opponentScore").textContent = "0";
+}
 }
