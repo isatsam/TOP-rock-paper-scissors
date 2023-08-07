@@ -71,6 +71,7 @@ a:hover {
     width: 12vw;
     font-size: 24px;
     margin: 25px;
+    min-width: 80px;
 }
 
 .score > .separator {
