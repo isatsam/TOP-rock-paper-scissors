@@ -4,6 +4,8 @@ function toggleInactivity(id) {
     el.classList.toggle("selected");
 }
 
+
+/* Update page while the game haven't ended yet */
 function addScore(side) {
     if (side == "tie") { return; }
     const score = document.getElementById(side + "Score");
@@ -44,6 +46,11 @@ function changeOpponentStatus(gameRestarted) {
 
 /* Call all visual changes when the game didn't end */
 function updatePage(side) {
+    addScore(side);                  // Change score
+    announceRound(side);             // Change announcement
+    changeOpponentStatus(false);     // Change opponent's status to a randomly picked one
+}
+
     addScore(side);
     announceRound(side);
     changeOpponentStatus(false);
