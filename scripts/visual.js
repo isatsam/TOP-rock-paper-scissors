@@ -5,6 +5,8 @@ function toggleInactivity(id) {
 }
 
 function addScore(side) {
+    if (side == "tie") { return; }
     const score = document.getElementById(side + "Score");
-    score.textContent(+(score.textContent) + 1);
+    score.textContent = +(score.textContent) + 1;
+}
 }
