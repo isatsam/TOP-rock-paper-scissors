@@ -33,8 +33,9 @@ function changeOpponentStatus(gameRestarted) {
             "Opponent is staring at your hand...",
             "Opponent is trying to predict the future...",
             "Opponent is fidgeting...", 
-            "", "", "", "", "", "", "", "", "", "", ""
-            // 4 in 15 chance for a unique status, otherwise nothing is displayed
+            "Opponent convinces itself that you're cheating...", 
+            "", "", "", "", "", "", "", "", "", ""
+            // 5 in 15 chance for a unique status, otherwise nothing is displayed
         ];
         let newStatusIndex = Math.floor(Math.random() * (statuses.length - 0) + 0);
         status.textContent = statuses[newStatusIndex];
