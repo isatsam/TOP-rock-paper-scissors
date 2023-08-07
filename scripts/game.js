@@ -1,23 +1,19 @@
 function pickWinner(player, computer) {
-    if (computer == 3 || player == 3) {
-        return Math.min(player, computer);
-    } else {
-        return Math.max(player, computer);
-    }  
-}
-
-function getPlayerChoice(choice) {
-    array = ["rock", "paper", "scissors"];
-    if (!array.includes(choice)) {
-        console.log("Hey! Play by the rules!");
-    } else {
-        return array.indexOf(choice);
+    if (computer == player) { 
+        // Equals = tie
+        return "tie";
+    } else if (computer == 3 || player == 3) {
+        // Biggest value = winner
+        if (computer < player) { return "player"; };
+    } else { 
+        // Smallest value = winner
+        if (computer > player) { return "player"; };
     }
+    return "computer";
 }
 
-function playRound (playerClick) {
+function playRound(playerClick) {
     const computerChoice = () => Math.floor(Math.random() * (4 - 1) + 1);
-    const playerChoice = getPlayerChoice(playerClick);
-    let winner = decideWinner(playerChoice, computerChoice);
+    let winner = pickWinner(playerClick, computerChoice);
+    addScore(winner);
 }
-
