@@ -51,7 +51,11 @@ function updatePage(side) {
     changeOpponentStatus(false);     // Change opponent's status to a randomly picked one
 }
 
-    addScore(side);
-    announceRound(side);
-    changeOpponentStatus(false);
+function announceWinner (winner) {
+    if (winner != "Tie") {
+        document.getElementById("announcement").textContent = `${winner} won! Congratulations to the winner!`
+    } else {
+        document.getElementById("announcement").textContent = "It's a tie... Better luck next time!"
+    }
+}
 }
