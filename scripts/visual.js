@@ -4,7 +4,7 @@ function toggleInactivity(id) {
     el.classList.toggle("selected");
 }
 
-
+/* -------------------------------------- */
 /* Update page while the game haven't ended yet */
 function addScore(side) {
     if (side == "tie") { return; }
@@ -46,11 +46,12 @@ function changeOpponentStatus(gameRestarted) {
 
 /* Call all visual changes when the game didn't end */
 function updatePage(side) {
-    addScore(side);                  // Change score
     announceRound(side);             // Change announcement
     changeOpponentStatus(false);     // Change opponent's status to a randomly picked one
 }
 
+/* -------------------------------------- */
+/* Update page once the game has ended (5 rounds have been played) */
 function announceWinner (winner) {
     if (winner != "Tie") {
         document.getElementById("announcement").textContent = `${winner} won! Congratulations to the winner!`
@@ -64,6 +65,8 @@ function resetScore () {
     document.getElementById("opponentScore").textContent = "0";
 }
 
+/* Call all visual changes after the game ended,
+    (!) announce winner (!) */
 function endGame() {
     const playerScore = document.getElementById("playerScore").textContent;
     const opponentScore = document.getElementById("opponentScore").textContent;
