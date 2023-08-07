@@ -4,24 +4,25 @@
     <meta charset="UTF-8" />
     <title>Rock, paper, scissors</title>
     <!--<script src="./scripts/game.js"></script>-->
+    <script src="./scripts/visual.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
         <div class="ai">
             <p>Opponent is waiting for you...</p>
-            <div class="choices inactive">
-                <img id="aiRock" src="./assets/rock.svg" alt="Opponent's Rock"></img>
-                <img id="aiPaper" src="./assets/paper.svg" alt="Opponent's Paper"></img>
-                <img id="aiScissors" src="./assets/scissors.svg" alt="Opponent's Scissors"></img>
+            <div class="choices">
+                <img id="aiRock" class="inactive" src="./assets/rock.svg" alt="Opponent's Rock"></img>
+                <img id="aiPaper" class="inactive" src="./assets/paper.svg" alt="Opponent's Paper"></img>
+                <img id="aiScissors" class="inactive" src="./assets/scissors.svg" alt="Opponent's Scissors"></img>
             </div>
         </div>
         <div class="player">
             <p id="announcement">Rock, paper, scissors?</p>
             <div class="choices">
-                <input id="playerRock" type="image" src="./assets/rock.svg" alt="Rock"></input>
-                <input id="playerPaper" type="image" src="./assets/paper.svg" alt="Paper"></input>
-                <input id="playerScissors" type="image" src="./assets/scissors.svg" alt="Scissors"></input>
+                <input id="playerRock" class="possible-choice" onclick="getPlayerChoice('rock')" type="image" src="./assets/rock.svg" alt="Rock"></input>
+                <input id="playerPaper" class="possible-choice" onclick="getPlayerChoice('paper')" type="image" src="./assets/paper.svg" alt="Paper"></input>
+                <input id="playerScissors" class="possible-choice" onclick="getPlayerChoice('scissors')" type="image" src="./assets/scissors.svg" alt="Scissors"></input>
             </div>
         </div>
         <div class="score"><span id="playerScore">0</span> <span class="separator">:</span> <span id="opponentScore">0</span></div>
