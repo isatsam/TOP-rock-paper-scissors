@@ -32,11 +32,6 @@ function pickWinner(playerClick, opponentChoice) {
     return winner;
 }
 
-function getOpponentChoice () {
-    let array = ["rock", "paper", "scissors"];
-    return array[Math.floor(Math.random() * (array.length - 1) + 1)];
-}
-
 function playRound(playerClick) {
     let opponentChoice = getOpponentChoice();
     let winner = pickWinner(playerClick, opponentChoice);
