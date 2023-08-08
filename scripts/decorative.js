@@ -13,3 +13,19 @@ function toggleAllPlayer () {
     toggleInactivity("playerPaper");
     toggleInactivity("playerScissors");
 }
+
+function toggleRoundResults (playerChoiceById, opponentChoiceById) {
+    if (playerChoiceById == "rock") { player = "Rock" } 
+    else if (playerChoiceById == "paper") { player = "Paper" } 
+    else { player = "Scissors"}
+    player = "player" + player
+    document.getElementById(player).classList.toggle("selected");
+
+    if (opponentChoiceById == "rock") { opponent = "Rock" } 
+    else if (opponentChoiceById == "paper") { opponent = "Paper" } 
+    else { opponent = "Scissors"}
+    opponent = "opponent" + opponent
+    document.getElementById(opponent).classList.toggle("selected");
+
+    console.log("Toggled round results")
+}
