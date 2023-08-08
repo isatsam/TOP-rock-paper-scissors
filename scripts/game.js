@@ -36,18 +36,11 @@ function playRound(playerClick) {
     let opponentChoice = getOpponentChoice();
     let winner = pickWinner(playerClick, opponentChoice);
     currentRoundCount = currentRoundCount + 1;
-    addScore(winner); // This is the only "visual" function that we call inside game logic
     console.log(winner);
     console.log("Player's choice: " + playerClick)
     console.log("Opponent's choice: " + opponentChoice)
 
-    toggleRoundResults(playerClick, opponentChoice);
-    toggleAllPlayer();
-    setTimeout(function() {
-        toggleAllPlayer();
-        toggleRoundResults(playerClick, opponentChoice);
-    }, 500);
-
+    addScore(winner);
 
     if (currentRoundCount >= 5) {
         endGame(winner);
