@@ -29,3 +29,13 @@ function toggleRoundResults (playerChoiceById, opponentChoiceById) {
 
     console.log("Toggled round results")
 }
+
+function toggleOpponent (opponentChoice) {
+    if (opponentChoice == "rock") { opponent = "Rock" } 
+    else if (opponentChoice == "paper") { opponent = "Paper" } 
+    else { opponent = "Scissors"}
+    opponent = "opponent" + opponent
+    document.getElementById(opponent).classList.toggle("selected");
+
+    console.log("Toggled opponent's choice")
+}

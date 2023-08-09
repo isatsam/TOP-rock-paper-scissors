@@ -1,4 +1,5 @@
 let currentRoundCount = 0;
+let showOpponentChoice = false;
 
 function pickWinner(playerClick, opponentChoice) {
     let array = ["rock", "paper", "scissors"];
@@ -33,12 +34,20 @@ function pickWinner(playerClick, opponentChoice) {
 }
 
 function playRound(playerClick) {
+    if (showOpponentChoice) {
+        clearTimeout(showOpponentChoice);
+    }
     let opponentChoice = getOpponentChoice();
     let winner = pickWinner(playerClick, opponentChoice);
     currentRoundCount = currentRoundCount + 1;
     console.log(winner);
     console.log("Player's choice: " + playerClick)
     console.log("Opponent's choice: " + opponentChoice)
+
+    toggleOpponent(opponentChoice);
+    showOpponentChoice = setTimeout(function() {
+        toggleOpponent(opponentChoice);
+    }, 600);
 
     addScore(winner);
 
