@@ -34,6 +34,7 @@ function pickWinner(playerClick, opponentChoice) {
 }
 
 function playRound(playerClick) {
+    resetOpponentChoices();
     if (showOpponentChoice) {
         clearTimeout(showOpponentChoice);
     }
