@@ -45,7 +45,7 @@ function changeOpponentStatus(gameRestarted) {
 /* Call all visual changes when the game didn't end */
 function updatePage(side) {
     announceRound(side);             // Change announcement
-    changeOpponentStatus(false);     // Change opponent's status to a randomly picked one
+    // changeOpponentStatus(false);     // Change opponent's status to a randomly picked one
 }
 
 /* -------------------------------------- */
@@ -73,11 +73,10 @@ function endGame() {
     }
 
     announceWinner(winner);     // Change announcement
-    changeOpponentStatus(true); // Set opponent's status to default
 
     toggleAllPlayer();
     setTimeout(function() {
-        resetVisuals();
+        resetVisuals(true);
         toggleAllPlayer();
     }, 2000);
 }
@@ -103,9 +102,12 @@ function resetOpponentChoices() {
     })
 }
 
-function resetVisuals () {
-    resetScore();
+function resetVisuals (endgame = false) {
     resetAnnouncement();
-    resetCount();
     resetOpponentChoices();
+    if (endgame) {
+        resetScore();
+        resetCount();
+        changeOpponentStatus(true);
+    }
 }
