@@ -97,11 +97,9 @@ function resetCount () {
     currentRoundCount = 0;
 }
 
-function resetAllChoices() {
-    ["player", "opponent"].forEach(function(side) {
-        ["Rock", "Paper", "Scissors"].forEach(function(choice) {
-            document.getElementById(side + choice).classList.remove("selected");
-        })
+function resetOpponentChoices() {
+    ["Rock", "Paper", "Scissors"].forEach(function(choice) {
+        document.getElementById("opponent" + choice).classList.remove("selected");
     })
 }
 
@@ -109,5 +107,5 @@ function resetVisuals () {
     resetScore();
     resetAnnouncement();
     resetCount();
-    resetAllChoices();
+    resetOpponentChoices();
 }
